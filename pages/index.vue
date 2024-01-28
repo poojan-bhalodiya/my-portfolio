@@ -1,5 +1,5 @@
 <template>
-  <div>Page Index</div>
+  <div class="bg-secondary">Page Index</div>
   <!-- <img src="public/profile-pic.jpg" /> -->
 </template>
 <script setup>
@@ -13,11 +13,11 @@ useHead({
     },
     {
       name: "keywords",
-      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer`,
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer`,
     },
     {
       property: "image",
-      content: "public/profile-pic.jpg",
+      content: "https://poojan-bhalodiya.vercel.app/images/profile-1.jpg",
     },
     { hid: "og:type", property: "og:type", content: "website" },
     {
@@ -26,8 +26,7 @@ useHead({
     },
     {
       property: "og:title",
-      content:
-        `Poojan Bhalodiya`,
+      content: `Poojan Bhalodiya`,
     },
     {
       property: "og:description",
@@ -35,7 +34,7 @@ useHead({
     },
     {
       property: "og:image",
-      content: "public/profile-pic.jpg",
+      content: "https://poojan-bhalodiya.vercel.app/images/profile-1.jpg",
     },
     {
       name: "og:keywords",
