@@ -1,6 +1,7 @@
 <template>
-  <div class="bg-secondary"></div>
-  <!-- <img src="public/profile-pic.jpg" /> -->
+  <div class="bg-secondary">
+    <h1>Hello World</h1>
+  </div>
 </template>
 <script setup>
 useHead({
@@ -17,7 +18,8 @@ useHead({
     },
     {
       property: "image",
-      content: "/profile-1.jpg",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1706473841/qcfk4ghdrkmwcq94mivz.jpg",
     },
     { hid: "og:type", property: "og:type", content: "website" },
     {
@@ -34,7 +36,8 @@ useHead({
     },
     {
       property: "og:image",
-      content: "/profile-1.jpg",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1706473841/qcfk4ghdrkmwcq94mivz.jpg",
     },
     {
       name: "og:keywords",
