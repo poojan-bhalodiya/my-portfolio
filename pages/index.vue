@@ -17,7 +17,7 @@ useHead({
     },
     {
       property: "image",
-      content: "https://poojan-bhalodiya.vercel.app/images/profile-1.jpg",
+      content: "https://poojan-bhalodiya.vercel.app/profile-1.jpg",
     },
     { hid: "og:type", property: "og:type", content: "website" },
     {
@@ -34,7 +34,7 @@ useHead({
     },
     {
       property: "og:image",
-      content: "https://poojan-bhalodiya.vercel.app/images/profile-1.jpg",
+      content: "https://poojan-bhalodiya.vercel.app/profile-1.jpg",
     },
     {
       name: "og:keywords",
