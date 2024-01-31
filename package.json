@@ -2,10 +2,10 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
-  "version":"0.1.3",
+  "version":"0.1.4",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "build": "nuxt build ",
+    "dev": "nuxt dev --port 3003",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

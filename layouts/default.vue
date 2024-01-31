@@ -1,6 +1,8 @@
 <template>
   <div class="flex overflow-hidden h-screen">
     <Sidebar />
-    <NuxtPage class="w-4/5" />
+    <div class="w-4/5">
+      <slot />
+    </div>
   </div>
 </template>
