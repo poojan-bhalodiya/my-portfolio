@@ -3,6 +3,7 @@
     <NuxtLoadingIndicator />
     <NuxtLayout>
       <div class="main-section">
+        <TopBar />
         <NuxtPage />
       </div>
     </NuxtLayout>

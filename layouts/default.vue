@@ -1,7 +1,7 @@
 <template>
-  <div class="flex overflow-hidden h-screen">
+  <div class="flex overflow-hidden h-screen bg-secondary">
     <Sidebar />
-    <div class="w-4/5">
+    <div class="w-full">
       <slot />
     </div>
   </div>

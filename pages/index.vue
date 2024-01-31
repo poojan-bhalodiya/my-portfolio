@@ -7,13 +7,6 @@
   </div>
 </template>
 <script setup>
-definePageMeta({
-  // pageTransition: {
-  //   name: "rotate",
-  // },
-  pageTransition: "fade",
-});
-
 useHead({
   title: "Test App",
   meta: [

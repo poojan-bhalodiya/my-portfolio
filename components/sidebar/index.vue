@@ -1,16 +1,28 @@
 <template>
-  <div class="bg-primary w-1/5 min-w-72 text-white">
-    <div class="h-full flex flex-col">
+  <div
+    class="bg-primary text-white sidebar w-full md:w-[320px] h-full"
+    :class="isToggle ? 'absolute md:relative' : 'hidden md:flex '"
+  >
+    <button
+      @click="isToggle = !isToggle"
+      class="absolute right-1 top-1 p-2 text-2xl md:hidden"
+    >
+      <Icon name="material-symbols:close" />
+    </button>
+    <div class="h-full flex flex-col w-full">
       <!-- Branding -->
       <div
-        class="py-12 px-4 text-4xl font-semibold text-center border-b border-yellow-600"
+        class="py-4 md:py-12 px-4 text-2xl md:text-4xl font-semibold text-center border-b border-yellow-600"
       >
         Test App
         <!-- <span class="text-yellow-600">P</span>oojan Bhalodiya -->
       </div>
-      <div class="items-center h-full flex justify-center flex-col">
+      <div
+        class="items-center h-full flex justify-center flex-col"
+        @click="isToggle = !isToggle"
+      >
         <!-- Navigations -->
-        <div class="py-4 px-4 space-y-4 flex flex-col items-start">
+        <div class="space-y-4 flex flex-col items-start">
           <NuxtLink
             :to="item.link"
             v-for="item in sidebarNavigations"
@@ -51,6 +63,12 @@
 </template>
 <script setup>
 import { version } from "@/package.json";
+const { $listen } = useNuxtApp();
+
+$listen("toggle-sidebar", () => {
+  isToggle.value = !isToggle.value;
+});
+const isToggle = ref(false);
 const sidebarNavigations = [
   {
     icon: "material-symbols:home",
@@ -114,5 +132,11 @@ const sidebarSocialLinks = [
 <style>
 .router-link-active {
   @apply group-active:bg-yellow-600 text-yellow-600;
+}
+.sidebar {
+  backdrop-filter: blur(30px) saturate(2);
+  -webkit-backdrop-filter: blur(30px) saturate(2);
+  padding-inline: 0;
+  transition: 2.2s cubic-bezier(0.36, -0.01, 0, 0.77);
 }
 </style>
