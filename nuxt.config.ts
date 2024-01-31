@@ -5,4 +5,7 @@ export default defineNuxtConfig({
   gtag: {
     id: "G-YHWG5TVK7Z",
   },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
 });
