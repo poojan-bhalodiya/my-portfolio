@@ -5,8 +5,8 @@
     <NuxtLink
       :to="`/${isBlog ? 'blog' : 'project'}/${slug}`"
       class="w-full md:flex-[0_0_220px]"
-      target="_blank"
     >
+      <!-- target="_blank" -->
       <img
         alt="No Image Found For Blog"
         :src="image"
@@ -21,13 +21,12 @@
           <span>{{ dateFormat(wdate) }}</span>
         </div>
         <div class="space-y-1 py-4 text-grey-900">
-          <a
-            href="/blog/5g-how-travel-esim-saved-my-day"
+          <NuxtLink
+            :to="`/${isBlog ? 'blog' : 'project'}/${slug}`"
             class="text-truncate-2 text-sm font-bold md:text-base"
-            target="_blank"
           >
             {{ title }}
-          </a>
+          </NuxtLink>
           <p class="text-truncate-2 text-sm">
             {{ description }}
           </p>
@@ -46,7 +45,6 @@
         <NuxtLink
           :to="`/${isBlog ? 'blog' : 'project'}/${slug}`"
           class="text-sm font-bold text-white"
-          target="_blank"
         >
           Read more
         </NuxtLink>

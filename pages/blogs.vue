@@ -73,10 +73,10 @@ const loading = ref(true);
 
 // Sorting & Searching
 const searchKey = ref("");
-const selected = ref("ASC");
+const selected = ref("DESC");
 const options = ref([
-  { text: "Newest to Oldest", value: "ASC" },
-  { text: "Oldest to Newest", value: "DESC" },
+  { text: "Oldest to Newest", value: "ASC" },
+  { text: "Newest to Oldest", value: "DESC" },
 ]);
 
 const resetFilter = () => {
