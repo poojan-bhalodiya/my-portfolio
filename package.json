@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "@vueuse/nuxt": "^10.7.2",
+    "date-fns": "^3.3.1",
+    "lodash": "^4.17.21",
     "mitt": "^3.0.1"
   }
 }
