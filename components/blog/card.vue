@@ -3,7 +3,7 @@
     class="media-shadow flex flex-col overflow-hidden rounded-lg bg-secondary-900 md:flex-row"
   >
     <NuxtLink
-      :to="`/blog/${slug}`"
+      :to="`/${isBlog ? 'blog' : 'project'}/${slug}`"
       class="w-full md:flex-[0_0_220px]"
       target="_blank"
     >
@@ -44,7 +44,7 @@
       </div>
       <div class="mt-6 flex justify-end">
         <NuxtLink
-          :to="`/blog/${slug}`"
+          :to="`/${isBlog ? 'blog' : 'project'}/${slug}`"
           class="text-sm font-bold text-white"
           target="_blank"
         >
@@ -62,5 +62,9 @@ const props = defineProps({
   description: String,
   slug: String,
   wdate: String,
+  isBlog: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>

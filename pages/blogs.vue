@@ -48,6 +48,7 @@
         :description="blog.description"
         :slug="blog.slug"
         :wdate="blog.date"
+        :is-blog="true"
       />
     </div>
     <div v-else>
