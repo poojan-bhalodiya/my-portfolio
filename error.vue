@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <NuxtLayout>
       <div
         class="w-full flex flex-col items-center justify-center bg-secondary-950 text-white h-full"
