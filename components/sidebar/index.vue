@@ -26,7 +26,7 @@
           <NuxtLink
             :to="item.link"
             v-for="item in sidebarNavigations"
-            class="border-b hover:border-yellow-600 border-primary transition-all duration-300 p-2 flex items-center justify-center group"
+            class="border-b hover:border-yellow-600 border-primary rounded-bl transition-all duration-300 p-2 flex items-center justify-center group"
           >
             <Icon
               :name="item.icon"
