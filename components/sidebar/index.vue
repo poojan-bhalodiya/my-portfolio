@@ -14,8 +14,8 @@
       <div
         class="py-4 md:py-12 px-4 text-2xl md:text-4xl font-semibold text-center border-b border-yellow-600"
       >
-        Test App
-        <!-- <span class="text-yellow-600">P</span>oojan Bhalodiya -->
+        <!-- Test App -->
+        <span class="text-yellow-600">P</span>oojan Bhalodiya
       </div>
       <div
         class="items-center h-full flex justify-center flex-col"
