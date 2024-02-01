@@ -1,6 +1,6 @@
 <template>
-  <!-- Project Listing -->
   <div class="py-8 flex flex-col items-center w-full overflow-auto">
+    <!-- Project Listing -->
     <div class="">
       <h1 class="text-2xl font-semibold text-center">All Projects</h1>
     </div>
