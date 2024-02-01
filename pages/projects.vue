@@ -66,7 +66,8 @@
   </div>
 </template>
 <script setup>
-import { debounce } from "lodash";
+// import { debounce } from "lodash";
+import { debounce } from "lodash-es";
 import blogDetails from "@/data/projects/detail.js";
 import { ref, computed } from "vue";
 
