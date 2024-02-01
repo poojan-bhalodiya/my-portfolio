@@ -6,7 +6,7 @@
     </div>
 
     <div
-      class="w-full md:w-2/3 border border-secondary-700 md:rounded py-4 mt-10 text-center bg-secondary-800 flex items-center justify-between px-4"
+      class="w-full md:w-2/3 border border-secondary-700 md:rounded py-4 mt-10 text-center bg-secondary-800 flex items-center justify-between px-1 md:px-4"
     >
       <!-- Search Blog -->
       <input
@@ -23,7 +23,7 @@
         </option>
       </select>
     </div>
-    <div v-if="loading" class="mt-10 w-2/3 space-y-4">
+    <div v-if="loading" class="mt-10 w-3/4 md:w-2/3 space-y-4">
       <div
         v-for="(_, i) in 4"
         :key="i"
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-10 w-2/3 space-y-4" v-else-if="finalBlogs.length">
+    <div class="mt-10 w-3/4 md:w-2/3 space-y-4" v-else-if="finalBlogs.length">
       <BlogCard
         v-for="(blog, i) in finalBlogs"
         :image="blog.thumbnail"
