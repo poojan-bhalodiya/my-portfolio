@@ -35,6 +35,11 @@
       <div>
         <h2>Experties in Tools</h2>
       </div>
+
+      <div>
+        Resume
+        <a href="/poojan_bhalodiya_resume.pdf" download> Download </a>
+      </div>
     </div>
   </div>
 </template>

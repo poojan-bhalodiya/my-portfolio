@@ -29,30 +29,26 @@
           <p class="text-orange-400 text-2xl font-semibold">Poojan Bhalodiya</p>
           <p class="font-semibold">Backend Developer</p>
           <p class="mt-5">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..", comes from a line in section 1.10.32.
+            Hello, I'm Poojan Bhalodiya, and I'm set to complete my B.voc from
+            Silver Oak University in 2024. With a strong foundation in Uneecops
+            Business Solutions Pvt. Ltd., where I garnered 1.8 years of
+            experience, my expertise spans SAP B1, MSSQL, Crystal Reports, and
+            Hana Studio. Driven by a fascination with database interactions, I
+            recently redirected my career path towards NodeJS, emphasizing
+            backend development. This transition underscores my commitment to
+            exploring and mastering the dynamic field of backend technologies.
           </p>
 
           <div class="mt-5 flex gap-3">
             <button
-              @click=""
-              class="border p-3 border-orange-300 rounded-md text-orange-300 hover:text-orange-400"
+              @click="$router.push({ path: `/contact` })"
+              class="border p-3 border-orange-400 rounded-md hover:ring hover:ring-clay-400 font-semibold"
             >
               Contact Me
             </button>
             <button
-              @click=""
-              class="border p-3 border-orange-300 rounded-md text-orange-300 hover:text-orange-400"
+              @click="$router.push({ path: `/resume` })"
+              class="border p-3 border-orange-400 rounded-md hover:ring hover:ring-clay-400 font-semibold"
             >
               Resume
             </button>
@@ -61,18 +57,20 @@
       </div>
       <!-- My Journey -->
       <div class="mt-16">
-        <h2 class="font-semibold text-2xl text-center">My Interests</h2>
-        <div class="flex mt-5 flex-wrap items-center justify-center">
-          <div v-for="(item, i) in journey" :key="i">
-            <div class="flex">
-              <div class="">
-                <Icon :name="item.icon" />
+        <h2 class="font-semibold text-2xl text-center">My Journey</h2>
+        <div class="flex mt-5 flex-wrap items-center justify-center gap-10">
+          <div v-for="(item, i) in journey" :key="i" class="">
+            <div class="flex rounded items-center justify-center gap-2">
+              <div
+                class="h-10 w-10 border border-dotted flex items-center justify-center rounded-md text-clay-400"
+              >
+                <Icon :name="item.icon" class="text-2xl" />
               </div>
               <div class="">
-                <p>
+                <p class="font-semibold">
                   {{ item.title }}
                 </p>
-                <p>
+                <p class="text-clay-400 text-sm">
                   {{ item.subtitle }}
                 </p>
               </div>
@@ -94,37 +92,35 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
-
 const intrests = [
   {
     icon: "fluent:xbox-controller-16-regular",
     label: "Video Games",
   },
   {
-    icon: "headphone",
+    icon: "mingcute:headphone-fill",
     label: "Music",
   },
   {
-    icon: "bag",
+    icon: "ph:bag",
     label: "Traveling",
   },
 ];
 
 const journey = [
   {
-    icon: "badge",
-    title: "5 Years Job",
+    icon: "simple-line-icons:badge",
+    title: "1.8 Years Job",
     subtitle: "Experience",
   },
   {
-    icon: "presentation",
-    title: "500+ Projects",
+    icon: "mdi:presentation-play",
+    title: "6+ Projects",
     subtitle: "Completed",
   },
   {
-    icon: "tool",
-    title: "2+ Product Work",
+    icon: "carbon:tool-kit",
+    title: "Product Work",
     subtitle: "Service Experiene",
   },
 ];

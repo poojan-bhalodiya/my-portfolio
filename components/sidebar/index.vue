@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-primary text-white sidebar w-full md:w-[320px] h-full z-50 animate__animated animate__slideInLeft "
+    class="bg-primary text-white sidebar w-full md:w-[320px] h-full z-50 animate__animated animate__slideInLeft"
     :class="isToggle ? 'absolute md:relative' : 'hidden md:flex '"
   >
     <button
@@ -137,6 +137,6 @@ const sidebarSocialLinks = [
   backdrop-filter: blur(30px) saturate(2);
   -webkit-backdrop-filter: blur(30px) saturate(2);
   padding-inline: 0;
-  transition: 2.2s cubic-bezier(0.36, -0.01, 0, 0.77);
+  transition: 0.7s cubic-bezier(0.36, -0.01, 0, 0.77);
 }
 </style>
