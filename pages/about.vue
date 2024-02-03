@@ -13,19 +13,19 @@
       </div>
 
       <!-- Image & Intro -->
-      <div class="gap-8 mt-14 flex">
+      <div class="gap-8 mt-14 flex items-center justify-center">
         <!-- Image Here -->
         <div
-          class="w-5/12 h-[450px] border flex items-center justify-center overflow-hidden"
+          class="w-[350px] h-[450px] border flex items-center justify-center overflow-hidden"
         >
           <img
-            src="https://images.unsplash.com/photo-1667831085395-edf105930c5e"
+            src="https://source.unsplash.com/random/350x450?man"
             alt="No Image Found"
             class="object-center"
           />
         </div>
         <!-- Intro Here -->
-        <div class="w-7/12">
+        <div class="w-1/2 max-w-md">
           <p class="text-orange-400 text-2xl font-semibold">Poojan Bhalodiya</p>
           <p class="font-semibold">Backend Developer</p>
           <p class="mt-5">
@@ -56,7 +56,7 @@
         </div>
       </div>
       <!-- My Journey -->
-      <div class="mt-16">
+      <div class="mt-16 md:mt-20">
         <h2 class="font-semibold text-2xl text-center">My Journey</h2>
         <div class="flex mt-5 flex-wrap items-center justify-center gap-10">
           <div v-for="(item, i) in journey" :key="i" class="">
@@ -80,11 +80,22 @@
       </div>
 
       <!-- My Intrest -->
-      <div class="mt-16">
+      <div class="mt-16 md:mt-20">
         <h2 class="font-semibold text-2xl text-center">My Interests</h2>
-        <div class="flex mt-5 flex-wrap justify-center">
-          <div v-for="(item, i) in intrests" :key="i">
-            {{ item }}
+        <div class="flex mt-5 flex-wrap justify-center gap-12">
+          <div v-for="(item, i) in intrests" :key="i" class="">
+            <div class="flex rounded items-center justify-center gap-2">
+              <div
+                class="h-12 w-12 flex items-center justify-center rounded-md text-clay-400"
+              >
+                <Icon :name="item.icon" class="text-3xl" />
+              </div>
+              <div class="">
+                <p class="font-semibold">
+                  {{ item.label }}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
