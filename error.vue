@@ -8,7 +8,7 @@
         <h3 class="py-2 sm:py-2.5 text-2xl md:text-3xl">
           Sorry we couldn't find this page.
         </h3>
-        <p class="py-2 sm:py-2.5 mb-4 sm:mb-6">
+        <p class="py-2 sm:py-2.5 mb-4 sm:mb-6 text-center">
           But don't worry, you can find plenty of other things on our homepage.
         </p>
         <NuxtLink

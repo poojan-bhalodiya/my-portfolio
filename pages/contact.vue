@@ -6,20 +6,71 @@
         <h1 class="text-center text-4xl font-bold">Contact Me</h1>
       </div>
 
-      <!-- COntat Details -->
-      <div>
-        <!-- Call Me -->
-        <div></div>
+      <!-- Contat Details -->
+      <div class="flex items-center justify-center gap-3 mt-10 flex-wrap">
+        <a
+          v-for="(item, i) in contactus"
+          :key="i"
+          :href="getdoAction(item.is)"
+          target="_blank"
+          class="bg-secondary-900 rounded p-3 flex gap-3 items-center md:w-1/4 min-w-[300px] group pl-4"
+        >
+          <Icon
+            :name="item.icon"
+            class="text-clay-300 text-2xl h-10 w-10 border rounded-full p-2 border-clay-400 group-hover:bg-clay-400 group-hover:text-secondary-800"
+          />
+          <div class="text-start">
+            <p class="font-semibold">
+              {{ item.label }}
+            </p>
+            <p>
+              {{ item.content }}
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Connect with Me Across Social Channels -->
+      <div class="flex justify-center flex-col items-center mt-14 mx-4">
+        <p class="text-2xl font-bold text-center flex items-center gap-3">
+          <span class="hidden md:flex">
+            <Icon name="tabler:social" class="" />
+          </span>
+          Connect with Me Across Social Channels
+        </p>
+        <div class="mt-8 space-y-2">
+          <button
+            v-for="(item, i) in otherSocials"
+            :key="i"
+            class="flex items-center justify-between group text-xl bg-secondary-800 p-2 px-4 rounded w-60 hover:ring-1 hover:ring-clay-400"
+            @click="otherSocialsAction(item.link)"
+          >
+            <div class="flex gap-4 items-center">
+              <Icon :name="item.icon" class="group-hover:text-clay-400" />
+              <p class="group-hover:text-clay-400">{{ item.label }}</p>
+            </div>
+            <span
+              class="text-transparent group-hover:text-secondary-500 flex items-center"
+            >
+              <Icon name="ion:open-outline" />
+            </span>
+          </button>
+        </div>
       </div>
 
       <!-- Get In Touch -->
-      <div class="flex justify-center flex-col items-center">
-        <p class="text-2xl font-bold text-center">Get In Touch</p>
+      <div class="flex justify-center flex-col items-center mt-14 mx-4">
+        <p class="text-2xl font-bold text-center flex items-center gap-3">
+          <Icon name="ant-design:form-outlined" />
+          Get In Touch
+        </p>
         <form
           @submit.prevent="submitForm"
-          class="gap-4 flex items-center justify-center flex-col max-w-lg"
+          class="gap-4 flex items-center justify-center flex-col max-w-lg mt-10"
         >
-          <div class="flex w-full items-center justify-center">
+          <div
+            class="flex w-full items-center justify-center flex-wrap md:flex-nowrap gap-4 md:gap-0"
+          >
             <div class="w-full flex justify-center">
               <input
                 type="text"
@@ -30,7 +81,7 @@
                 required
               />
             </div>
-            <div class="w-full flex justify-center ml-4">
+            <div class="w-full flex justify-center md:ml-4">
               <input
                 class="bg-transparent border border-secondary-400 rounded-md p-1.5 selection:border-secondary-300 w-full"
                 type="email"
@@ -88,6 +139,50 @@ import { ref } from "vue";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 const db = getFirestore();
+
+const contactus = [
+  {
+    icon: "mdi:phone",
+    label: "Call Me",
+    content: "+91 7096 215026",
+    is: "call",
+  },
+  {
+    icon: "mdi:email",
+    label: "E-Mail",
+    content: "poojanbhalodiya02@gmail.com",
+    is: "mail",
+  },
+  {
+    icon: "mdi:location",
+    label: "Location",
+    content: "Ahmedabad Gujrat",
+    is: "latlong",
+  },
+];
+
+const otherSocials = [
+  {
+    icon: "mdi:linkedin",
+    label: "Linkedin",
+    link: "https://www.linkedin.com/in/poojan-bhalodiya",
+  },
+  {
+    icon: "simple-icons:linktree",
+    label: "Linktree",
+    link: "https://linktr.ee/PoojanBhalodiya",
+  },
+  {
+    icon: "mdi:github",
+    label: "Github",
+    link: "https://github.com/poojan-bhalodiya",
+  },
+  {
+    icon: "mdi:medium",
+    label: "Medium",
+    link: "https://medium.com/@poojanbhalodiya2003",
+  },
+];
 const loading = ref(false);
 const isSubmitted = ref(false);
 const formData = ref({
@@ -125,5 +220,28 @@ async function submitForm() {
     subject: "",
     message: "",
   };
+}
+
+function getdoAction(is) {
+  switch (is) {
+    case "call":
+      // window.open("https://api.whatsapp.com/send?phone=917096215026", "_blank");
+      return "https://api.whatsapp.com/send?phone=917096215026";
+    // break;
+    case "mail":
+      // window.open("mailto:poojanbhalodiya02@gmail.com", "_blank");
+      return "mailto:poojanbhalodiya02@gmail.com";
+    // break;
+    case "latlong":
+      // window.open(
+      //   "https://www.google.com/maps/place/Ahmedabad,+Gujarat",
+      //   "_blank"
+      // );
+      // break;
+      return "https://www.google.com/maps/place/Ahmedabad,+Gujarat";
+  }
+}
+function otherSocialsAction(link) {
+  window.open(link, "_blank");
 }
 </script>

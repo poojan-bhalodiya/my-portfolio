@@ -12,10 +12,10 @@
     <div class="h-full flex flex-col w-full">
       <!-- Branding -->
       <div
-        class="py-4 md:py-12 px-4 text-2xl md:text-4xl font-semibold text-center border-b border-yellow-600"
+        class="py-4 md:py-12 px-4 text-2xl md:text-4xl font-semibold text-center border-b border-clay-400"
       >
         <!-- Test App -->
-        <span class="text-yellow-600">P</span>oojan Bhalodiya
+        <span class="text-clay-400">P</span>oojan Bhalodiya
       </div>
       <div
         class="items-center h-full flex justify-center flex-col"
@@ -26,12 +26,9 @@
           <NuxtLink
             :to="item.link"
             v-for="item in sidebarNavigations"
-            class="border-b hover:border-yellow-600 border-primary rounded-bl transition-all duration-300 p-2 flex items-center justify-center group"
+            class="border-b hover:border-clay-400 border-primary rounded-bl transition-all duration-300 p-2 flex items-center justify-center group"
           >
-            <Icon
-              :name="item.icon"
-              class="group-hover:text-yellow-600 h-6 w-6"
-            />
+            <Icon :name="item.icon" class="group-hover:text-clay-400 h-6 w-6" />
             <span class="ml-2">
               {{ item.label }}
             </span>
@@ -40,7 +37,7 @@
       </div>
       <!-- Social Profile -->
       <div
-        class="py-5 border-b border-yellow-600 px-4 flex items-center justify-center gap-4"
+        class="py-5 border-b border-clay-400 px-4 flex items-center justify-center gap-4"
       >
         <NuxtLink
           :to="item.link"
@@ -50,12 +47,12 @@
         >
           <Icon
             :name="item.icon"
-            class="text-xl hover:text-yellow-600 hover:text-2xl transition-all duration-300"
+            class="text-xl hover:text-clay-400 hover:text-2xl transition-all duration-300"
           />
         </NuxtLink>
       </div>
       <!-- Application Version -->
-      <div class="border-t border-yellow-600 px-4 py-4 text-center">
+      <div class="border-t border-clay-400 px-4 py-4 text-center">
         Version : {{ version }}
       </div>
     </div>
@@ -131,7 +128,7 @@ const sidebarSocialLinks = [
 </script>
 <style>
 .router-link-active {
-  @apply group-active:bg-yellow-600 text-yellow-600;
+  @apply group-active:bg-clay-400 text-clay-400;
 }
 .sidebar {
   backdrop-filter: blur(30px) saturate(2);
