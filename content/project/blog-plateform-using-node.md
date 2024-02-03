@@ -1,7 +1,7 @@
-# Blog plateforme using Node.js 
+# Blog plateform using Node.js 
 This is a Blog platform. first to register to user, login user. User is login that the user Can Provide to CRUD Operation for blog so user can add blog, read blog, update blog, delete blog. User can search blog to particular id also.
 
-### Get Todo request 
+### Get Blog-Plateform request 
 ```http://localhost:8089/```
 
 ### How to run this Project

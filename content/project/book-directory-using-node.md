@@ -2,7 +2,7 @@
 This is a Book Directory. User can CRUD opperation in Books.
 User can Add Book, Read Book, Update Book, Delete Book.
 
-### Get Todo request 
+### Get Book Directory request 
 ```http://localhost:8000/```
 
 ### How to run this Project

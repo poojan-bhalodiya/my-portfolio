@@ -1,7 +1,7 @@
 # URL shortener using Node.js 
 This is a URL Shortener. User can add your URL and give the responce to shortUrl.
 
-### Get Todo request 
+### Get URL shortener request 
 ```http://localhost:3000/```
 
 ### How to run this Project
@@ -53,8 +53,5 @@ You can add in this api in browser to redirect original URL page.
 
 ### Get ShortURL
 
-![image]()
-
-### GEt redirect to original URL
 
  ![image](https://res.cloudinary.com/dhntmsget/image/upload/v1706794514/Projects/URL-shortener-using-nodejs/Screen%20Shorts/uvaxklexbdahfr7kbnfURL.png)

@@ -2,7 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "lint": "eslint .",
     "build": "nuxt build ",
@@ -29,6 +29,7 @@
     "@nuxt/content": "^2.11.0",
     "@tailwindcss/typography": "^0.5.10",
     "@vueuse/nuxt": "^10.7.2",
+    "animate.css": "^4.1.1",
     "aos": "^3.0.0-beta.6",
     "date-fns": "^3.3.1",
     "eslint": "^8.56.0",

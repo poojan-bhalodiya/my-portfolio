@@ -11,6 +11,9 @@ export default defineNuxtConfig({
   gtag: {
     id: "G-YHWG5TVK7Z",
   },
+
+  css: ["animate.css"],
+
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },

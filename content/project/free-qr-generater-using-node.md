@@ -1,7 +1,7 @@
 # QR Code generator using Node.js 
 A QR code generator Application. Pass the link and Qr Code generate.
 
-### Get Todo request 
+### Get QR Code Genrator request 
 ```http://localhost:3000/```
 
 ### How to run this Project
