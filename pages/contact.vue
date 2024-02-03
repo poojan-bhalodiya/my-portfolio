@@ -25,6 +25,7 @@
                 type="text"
                 class="bg-transparent border border-secondary-400 rounded-md p-1.5 selection:border-secondary-300 w-full capitalize"
                 placeholder="Name"
+                :disabled="loading"
                 v-model="formData.name"
                 required
               />
@@ -34,6 +35,7 @@
                 class="bg-transparent border border-secondary-400 rounded-md p-1.5 selection:border-secondary-300 w-full"
                 type="email"
                 placeholder="Email"
+                :disabled="loading"
                 v-model="formData.email"
                 required
               />
@@ -44,6 +46,7 @@
               class="bg-transparent border border-secondary-400 rounded-md p-1.5 selection:border-secondary-300 w-full"
               type="text"
               placeholder="Subject"
+              :disabled="loading"
               v-model="formData.subject"
               required
             />
@@ -52,14 +55,29 @@
             <textarea
               placeholder="Message"
               v-model="formData.message"
+              :disabled="loading"
               class="bg-transparent border border-secondary-400 rounded-md p-1.5 selection:border-secondary-300 w-full"
               required
             ></textarea>
           </div>
-          <button type="submit" class="bg-secondary-900 p-2 border border-secondary-400 ">
-            <Icon name="line-md:loading-loop" />
+          <button
+            type="submit"
+            class="bg-secondary-900 p-2 border border-secondary-400 rounded-md hover:bg-secondary-800 font-semibold hover:ring-2"
+            :disabled="loading"
+          >
+            <Icon v-if="loading" name="line-md:loading-loop" />
             Send Message
           </button>
+          <div
+            class="flex items-center justify-center gap-2 mt-5"
+            v-if="isSubmitted"
+          >
+            <Icon
+              name="material-symbols:mark-email-read-outline-rounded"
+              class="text-green-500 h-5 w-5"
+            />
+            <p class="text-green-500">Form Submitted Successfully</p>
+          </div>
         </form>
       </div>
     </div>
@@ -67,7 +85,11 @@
 </template>
 <script setup>
 import { ref } from "vue";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+
+const db = getFirestore();
 const loading = ref(false);
+const isSubmitted = ref(false);
 const formData = ref({
   name: "",
   email: "",
@@ -75,17 +97,33 @@ const formData = ref({
   message: "",
 });
 
-function submitForm() {
+async function submitForm() {
   loading.value = true;
-  console.log("Form submitted with data:", this.formData);
-  setTimeout(() => {
-    formData.value = {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    };
-  }, 2000);
-  loading.value = false;
+  isSubmitted.value = false;
+  console.log("Form submitted with data:", formData.value);
+  try {
+    const docRef = await addDoc(collection(db, "contacts"), {
+      name: formData.value.name,
+      email: formData.value.email,
+      subject: formData.value.subject,
+      message: formData.value.message,
+    });
+    if (docRef?.id) {
+      setTimeout(async () => {
+        loading.value = false;
+        isSubmitted.value = true;
+      }, 2000);
+    } else {
+      loading.value = false;
+    }
+  } catch (e) {
+    console.error("Error submitting form: ", e);
+  }
+  formData.value = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
 }
 </script>
