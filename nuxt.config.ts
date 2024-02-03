@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
   ],
   gtag: {
-    // id: "G-YHWG5TVK7Z",
+    id: "G-YHWG5TVK7Z",
   },
   app: {
     pageTransition: { name: "page", mode: "out-in" },

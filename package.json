@@ -2,15 +2,21 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
+    "lint": "eslint .",
     "build": "nuxt build ",
     "dev": "nuxt dev --port 3003",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "lint-staged": {
+    "*.{js,md,html,css,vue,json}": "prettier --write",
+    "*.{js,vue}": "eslint --ext .js,.vue --fix"
+  },
   "devDependencies": {
+    "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.11.1",
     "nuxt": "^3.9.3",
     "nuxt-gtag": "^1.1.2",
@@ -19,10 +25,13 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@firebase/firestore": "^4.4.2",
     "@nuxt/content": "^2.11.0",
     "@tailwindcss/typography": "^0.5.10",
     "@vueuse/nuxt": "^10.7.2",
     "date-fns": "^3.3.1",
+    "eslint": "^8.56.0",
+    "firebase": "^10.8.0",
     "lodash-es": "^4.17.21",
     "mitt": "^3.0.1",
     "sass": "^1.70.0",
