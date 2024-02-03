@@ -12,7 +12,7 @@
           But don't worry, you can find plenty of other things on our homepage.
         </p>
         <NuxtLink
-          class="border-yellow-600 border p-4 rounded hover:ring ring-yellow-500 transition-all duration-300"
+          class="border-clay-400 border p-4 rounded hover:ring ring-clay-400 transition-all duration-300"
           to="/"
         >
           Go Home

@@ -15,7 +15,10 @@
         class="py-4 md:py-12 px-4 text-2xl md:text-4xl font-semibold text-center border-b border-clay-400"
       >
         <!-- Test App -->
-        <span class="text-clay-400">P</span>oojan Bhalodiya
+        <span
+          class="bg-gradient-to-r from-clay-400 to-white bg-clip-text text-transparent"
+          >Poojan Bhalodiya</span
+        >
       </div>
       <div
         class="items-center h-full flex justify-center flex-col"

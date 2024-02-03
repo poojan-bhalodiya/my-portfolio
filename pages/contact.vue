@@ -2,8 +2,13 @@
   <div class="flex items-center justify-center w-full py-8">
     <div class="container">
       <!-- Heading -->
-      <div>
+      <div class="flex items-center justify-center flex-col">
         <h1 class="text-center text-4xl font-bold">Contact Me</h1>
+        <p class="text-center mt-6 max-w-3xl text-lg">
+          Ready to set your ideas ablaze? Whether you have a wild concept, a
+          burning question, or just want to share your favorite book, I'm all
+          ears. Let's spark something extraordinary!
+        </p>
       </div>
 
       <!-- Contat Details -->

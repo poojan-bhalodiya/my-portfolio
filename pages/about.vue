@@ -2,20 +2,27 @@
   <div class="flex items-center justify-center w-full py-8">
     <div class="container">
       <!-- Heading -->
-      <div>
+      <div class="flex items-center justify-center flex-col">
         <h1 class="text-center text-4xl font-bold">About Me</h1>
-        <p class="text-center pt-4">
-          Letraset sheets containing Lorem Ipsum passages, and more recently
-          with desktop publishing software like Aldus PageMaker including
-          versions of Lorem Ipsum.
+        <p class="text-center mt-6 max-w-3xl text-lg">
+          I am Poojan Bhalodiya, a creative mind shaping ideas into reality.
+          Specializing in Backend developer , I bring a unique perspective to
+          every project. Explore my portfolio and let's collaborate on your next
+          venture.
         </p>
       </div>
 
       <!-- Image & Intro -->
       <div class="gap-8 mt-14 flex">
         <!-- Image Here -->
-        <div class="w-5/12 border flex items-center justify-center">
-          Image Here
+        <div
+          class="w-5/12 h-[450px] border flex items-center justify-center overflow-hidden"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1667831085395-edf105930c5e"
+            alt="No Image Found"
+            class="object-center"
+          />
         </div>
         <!-- Intro Here -->
         <div class="w-7/12">
@@ -57,7 +64,19 @@
         <h2 class="font-semibold text-2xl text-center">My Interests</h2>
         <div class="flex mt-5 flex-wrap items-center justify-center">
           <div v-for="(item, i) in journey" :key="i">
-            {{ item }}
+            <div class="flex">
+              <div class="">
+                <Icon :name="item.icon" />
+              </div>
+              <div class="">
+                <p>
+                  {{ item.title }}
+                </p>
+                <p>
+                  {{ item.subtitle }}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -79,7 +98,7 @@ import { ref } from "vue";
 
 const intrests = [
   {
-    icon: "xbox",
+    icon: "fluent:xbox-controller-16-regular",
     label: "Video Games",
   },
   {
