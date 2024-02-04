@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center justify-center w-full py-8">
-    <div class="container max-w-[990px] mx-10 md:mx-20">
+    <div class="container max-w-[990px] mx-6 md:mx-20">
       <!-- Heading -->
       <div class="flex items-center justify-center flex-col">
         <h1 class="text-center text-4xl font-bold">Resume</h1>
@@ -8,7 +8,7 @@
           As a backend developer, I'm Poojan Bhalodiya—turning creativity into
           functionality. With a keen eye for detail and a passion for
           innovation, I bring a distinct approach to backend solutions. Take a
-          look at my portfolio, and let's team up for your next project.
+          look at my resume, and let's team up for your ideas.
         </p>
       </div>
 
