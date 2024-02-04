@@ -319,6 +319,48 @@
   </div>
 </template>
 <script setup>
+useHead({
+  title: "Resume | Poojan Bhalodiya",
+  meta: [
+    { property: "og:site_name", content: "Resume | Poojan Bhalodiya" },
+    {
+      name: "description",
+      content: `Resume of Poojan Bhalodiya, Explore my Education, Experience, experties and skills.`,
+    },
+    {
+      name: "keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, resume,education, Skills, Experience, Database Handler,Experties in database`,
+    },
+    {
+      property: "image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    { hid: "og:type", property: "og:type", content: "website" },
+    {
+      property: "og:url",
+      content: `https://poojan-bhalodiya.vercel.app/resume`,
+    },
+    {
+      property: "og:title",
+      content: `Resume | Poojan Bhalodiya`,
+    },
+    {
+      property: "og:description",
+      content: `Resume of Poojan Bhalodiya, Explore my Education, Experience, experties and skills.`,
+    },
+    {
+      property: "og:image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    {
+      name: "og:keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, resume,education, Skills, Experience, Database Handler,Experties in database`,
+    },
+  ],
+});
+
 const education = [
   {
     title: "Bachelor of Vocation",

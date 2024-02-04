@@ -23,7 +23,7 @@
           <img
             src="https://source.unsplash.com/random/350x450?man"
             alt="No Image Found"
-            class="object-center "
+            class="object-center"
           />
         </div>
         <!-- Intro Here -->
@@ -105,6 +105,48 @@
   </div>
 </template>
 <script setup>
+useHead({
+  title: "About Me | Poojan Bhalodiya",
+  meta: [
+    { property: "og:site_name", content: "About Me | Poojan Bhalodiya" },
+    {
+      name: "description",
+      content: `Poojan Bhalodiya, an Ahmedabad-based Backend Developer specializing in Node.js, shares his journey and interests in the world of technology.`,
+    },
+    {
+      name: "keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, about, ,My Journey, 'My Intrest`,
+    },
+    {
+      property: "image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    { hid: "og:type", property: "og:type", content: "website" },
+    {
+      property: "og:url",
+      content: `https://poojan-bhalodiya.vercel.app/about`,
+    },
+    {
+      property: "og:title",
+      content: `About Me | Poojan Bhalodiya`,
+    },
+    {
+      property: "og:description",
+      content: `Poojan Bhalodiya, an Ahmedabad-based Backend Developer specializing in Node.js, shares his journey and interests in the world of technology.`,
+    },
+    {
+      property: "og:image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    {
+      name: "og:keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, about, ,My Journey, 'My Intrest`,
+    },
+  ],
+});
+
 const intrests = [
   {
     icon: "fluent:xbox-controller-16-regular",

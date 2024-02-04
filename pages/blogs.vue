@@ -71,6 +71,48 @@ import { debounce } from "lodash-es";
 import blogDetails from "@/data/blogs/detail.js";
 import { ref, computed } from "vue";
 
+useHead({
+  title: "Blogs | Poojan Bhalodiya",
+  meta: [
+    { property: "og:site_name", content: "Blogs | Poojan Bhalodiya" },
+    {
+      name: "description",
+      content: `Explore a curated collection of insightful articles on the blog page, where creativity meets expertise. Dive into a world of compelling stories, tips, and inspiration that showcase the passion and knowledge behind the portfolio..`,
+    },
+    {
+      name: "keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, Blogs, Blogs List, Blog, articles, technology blog`,
+    },
+    {
+      property: "image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    { hid: "og:type", property: "og:type", content: "website" },
+    {
+      property: "og:url",
+      content: `https://poojan-bhalodiya.vercel.app/blogs`,
+    },
+    {
+      property: "og:title",
+      content: `Blogs | Poojan Bhalodiya`,
+    },
+    {
+      property: "og:description",
+      content: `Explore a curated collection of insightful articles on the blog page, where creativity meets expertise. Dive into a world of compelling stories, tips, and inspiration that showcase the passion and knowledge behind the portfolio..`,
+    },
+    {
+      property: "og:image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    {
+      name: "og:keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, Blogs, Blogs List, Blog, articles, technology blog`,
+    },
+  ],
+});
+
 const loading = ref(true);
 
 // Sorting & Searching

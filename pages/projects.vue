@@ -71,6 +71,48 @@ import { debounce } from "lodash-es";
 import blogDetails from "@/data/projects/detail.js";
 import { ref, computed } from "vue";
 
+useHead({
+  title: "Projects | Poojan Bhalodiya",
+  meta: [
+    { property: "og:site_name", content: "Projects | Poojan Bhalodiya" },
+    {
+      name: "description",
+      content: `Explore a showcase of my diverse projects, each a testament to my creative problem-solving and technical expertise. From innovative web applications to impactful design solutions, witness the culmination of my passion for excellence in every project.`,
+    },
+    {
+      name: "keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, Projects, project list, project using node`,
+    },
+    {
+      property: "image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    { hid: "og:type", property: "og:type", content: "website" },
+    {
+      property: "og:url",
+      content: `https://poojan-bhalodiya.vercel.app/projects`,
+    },
+    {
+      property: "og:title",
+      content: `Projects | Poojan Bhalodiya`,
+    },
+    {
+      property: "og:description",
+      content: `Explore a showcase of my diverse projects, each a testament to my creative problem-solving and technical expertise. From innovative web applications to impactful design solutions, witness the culmination of my passion for excellence in every project.`,
+    },
+    {
+      property: "og:image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    {
+      name: "og:keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, Projects, project list, project using node`,
+    },
+  ],
+});
+
 const loading = ref(true);
 
 // Sorting & Searching

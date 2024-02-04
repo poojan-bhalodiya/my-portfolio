@@ -143,6 +143,48 @@
 import { ref } from "vue";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 
+useHead({
+  title: "Contact Me | Poojan Bhalodiya",
+  meta: [
+    { property: "og:site_name", content: "Contact Me | Poojan Bhalodiya" },
+    {
+      name: "description",
+      content: `Connect with me effortlessly! Explore collaboration opportunities and reach out for a conversation on my Contact Me page, where possibilities meet communication`,
+    },
+    {
+      name: "keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, contact, , Contact me, social linkes, Linkedin', email, location`,
+    },
+    {
+      property: "image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    { hid: "og:type", property: "og:type", content: "website" },
+    {
+      property: "og:url",
+      content: `https://poojan-bhalodiya.vercel.app/contact`,
+    },
+    {
+      property: "og:title",
+      content: `Contact Me | Poojan Bhalodiya`,
+    },
+    {
+      property: "og:description",
+      content: `Connect with me effortlessly! Explore collaboration opportunities and reach out for a conversation on my Contact Me page, where possibilities meet communication`,
+    },
+    {
+      property: "og:image",
+      content:
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
+    },
+    {
+      name: "og:keywords",
+      content: `poojan patel, Poojan Bhalodiya, Ahmedabad, Backend Developer, nodejs developer, contact, , Contact me, social linkes, Linkedin', email, location`,
+    },
+  ],
+});
+
 const db = getFirestore();
 
 const contactus = [
