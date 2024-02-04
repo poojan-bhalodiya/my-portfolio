@@ -1,7 +1,21 @@
 <template>
   <div class="flex items-center justify-center flex-col">
-    <img :src="data.blogDetail?.banner" />
-    <div class="flex items-center justify-center my-10">
+    <img :src="data.blogDetail?.banner" class="min-h-20 md:h-auto object-cover md:object-cover" />
+    <div
+      class="flex items-center justify-center py-6 md:py-10 relative flex-col space-y-2"
+    >
+      <div class="w-full">
+        <button
+          @click="$router.back()"
+          class="bg-secondary-925 ml-5 rounded-2xl flex items-center justify-start p-2 gap-2 group hover:gap-5 transition-all duration-300"
+        >
+          <Icon
+            name="mdi:arrow-left"
+            class="h-6 w-6 group-hover:text-clay-400"
+          />
+          <span>Go Back</span>
+        </button>
+      </div>
       <article
         class="prose md:prose-lg w-4/5 article_style_2"
         v-if="data.article"

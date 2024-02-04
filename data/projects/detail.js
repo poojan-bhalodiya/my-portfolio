@@ -4,7 +4,7 @@ const Projects = [
       "https://res.cloudinary.com/dhntmsget/image/upload/v1706768266/blog-demo/2560X250.png",
     thumbnail:
       "https://res.cloudinary.com/dhntmsget/image/upload/v1706768200/blog-demo/250X250.png",
-    title: "Qr Code Generator  Using Node.js",
+    title: "Qr Code Generator Using Node.js",
     description:
       " This is a qr code generator using Node.js.  You can pass any link in box and click to  genrate QR Code to genrate QR code.  You can scan google scanner and use this.",
     date: "2024-01-30T00:00:00.000Z",
@@ -84,7 +84,7 @@ const Projects = [
       "https://res.cloudinary.com/dhntmsget/image/upload/v1706768266/blog-demo/2560X250.png",
     thumbnail:
       "https://res.cloudinary.com/dhntmsget/image/upload/v1706768200/blog-demo/250X250.png",
-    title: "URL-shortener-using-node.js",
+    title: "URL Shortener Using Node.js",
     description:
       "This is a URL Shortener. User can add your URL and give the responce to shortUrl. you can add this shorturl to endpoint that redirect to original URl. ",
     date: "2024-01-31T00:00:00.000Z",
@@ -119,7 +119,7 @@ const Projects = [
       "https://res.cloudinary.com/dhntmsget/image/upload/v1706768266/blog-demo/2560X250.png",
     thumbnail:
       "https://res.cloudinary.com/dhntmsget/image/upload/v1706768200/blog-demo/250X250.png",
-    title: "Weather-Dashboard",
+    title: "Weather Dashboard",
     description:
       "This is weather application using node.js.you have enter city name and check the weather for your city.",
     date: "2 Feb 2024",

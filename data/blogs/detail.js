@@ -1,31 +1,9 @@
 const blogDetail = [
   {
     banner:
-      "https://res.cloudinary.com/dhntmsget/image/upload/v1706768266/blog-demo/2560X250.png",
+      "https://res.cloudinary.com/dhntmsget/image/upload/v1707040168/Blog/HowToCreateServerUsingNodeAndExpress/banner/banner.png",
     thumbnail:
-      "https://res.cloudinary.com/dhntmsget/image/upload/v1706768200/blog-demo/250X250.png",
-    title: "Firebase database configuration steps",
-    description:
-      "This is a firebase configuration step by step explanation. you can folow the step and complete the config your firebase.",
-    date: "2 Sep 2023",
-    tags: ["firebase"],
-    slug: "firebase-configuration",
-    meta: {
-      url: "https://poojan-bhalodiya.vercel.app/blog/firebase-configuration",
-      keywords: [
-        "firebase",
-        "connect firebase",
-        "firestore",
-        "realtimedatabase",
-        "databaase",
-      ],
-    },
-  },
-  {
-    banner:
-      "https://res.cloudinary.com/dhntmsget/image/upload/v1706768266/blog-demo/2560X250.png",
-    thumbnail:
-      "https://res.cloudinary.com/dhntmsget/image/upload/v1706768200/blog-demo/250X250.png",
+      "https://res.cloudinary.com/dhntmsget/image/upload/v1707040245/Blog/HowToCreateServerUsingNodeAndExpress/thumbnail/thumbnail.png",
     title: "How to set up a simple server using Node.js and Express",
     description:
       "this blog is a setup for a basic server using node.js and Express.",
@@ -39,6 +17,28 @@ const blogDetail = [
         "Basic Node server",
         "Express.js",
         "Node.js + Express",
+      ],
+    },
+  },
+  {
+    banner:
+      "https://res.cloudinary.com/dhntmsget/image/upload/v1707044136/Blog/firebaseDatabaseConfignation/banner/banner.png",
+    thumbnail:
+      "https://res.cloudinary.com/dhntmsget/image/upload/v1707044225/Blog/firebaseDatabaseConfignation/thumbnail/thumbnail.png",
+    title: "Firebase database configuration steps",
+    description:
+      "This is a firebase configuration strp by step explanation. you can folow the step and complete the config your firebase.",
+    date: "2 Sep 2023",
+    tags: ["firebase", "FireStore", "Realtime Database"],
+    slug: "firebase-configuration",
+    meta: {
+      url: "https://poojan-bhalodiya.vercel.app/blog/firebase-configuration",
+      keywords: [
+        "firebase",
+        "connect firebase",
+        "firestore",
+        "realtimedatabase",
+        "databaase",
       ],
     },
   },
