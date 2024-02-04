@@ -1,7 +1,8 @@
 <template>
   <div class="my-8">
     <div>
-      <h1 class="text-2xl font-semibold text-center">Hola Amigos..</h1>
+      <h1 class="text-2xl font-semibold text-center">Home Page [WIP...]</h1>
+      <p class="text-center mt-5">Open Navigation To Go on another page</p>
     </div>
     <div></div>
   </div>

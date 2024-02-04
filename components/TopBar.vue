@@ -9,7 +9,9 @@
       <Icon name="formkit:open" class="text-3xl" />
     </button>
 
-    <div class="flex items-center justify-center w-full capitalize">{{ route.name }}</div>
+    <div class="flex items-center justify-center w-full capitalize truncate">
+      {{ route.params?._id ? route.params._id.replace(/-/g, " ") : route.name }}
+    </div>
   </div>
 </template>
 <script setup>
