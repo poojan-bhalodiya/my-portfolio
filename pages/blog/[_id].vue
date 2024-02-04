@@ -17,7 +17,6 @@
 </template>
 <script setup>
 import blogDetails from "@/data/blogs/detail.js";
-import { ref } from "vue";
 const { path } = useRoute();
 const route = useRoute();
 
@@ -36,41 +35,45 @@ const { data: data } = await useAsyncData("data", async () => {
 
 // Set Heads
 useHead({
-  title: data.value.blogDetail.title,
+  title: data.value.blogDetail.title || "Blog Title",
   meta: [
-    { property: "og:site_name", content: data.value.blogDetail?.title },
+    {
+      property: "og:site_name",
+      content: data.value.blogDetail?.title || "Blog Site Name",
+    },
     {
       name: "description",
-      content: data.value.blogDetail?.description,
+      content: data.value.blogDetail?.description || "Blog Description",
     },
     {
       name: "keywords",
-      content: data.value.blogDetail?.meta?.keywords,
+      content: data.value.blogDetail?.meta?.keywords || "Blog Keywords",
     },
     {
       property: "image",
-      content: data.value.blogDetail?.thumbnail,
+      content: data.value.blogDetail?.thumbnail || "Blog Thumbnail",
     },
     { hid: "og:type", property: "og:type", content: "website" },
     {
       property: "og:url",
-      content: data.value.blogDetail?.meta?.url,
+      content: data.value.blogDetail?.meta?.url || "Blog URL",
     },
     {
       property: "og:title",
-      content: data.value.blogDetail?.title,
+      content: data.value.blogDetail?.title || "Blog Title",
     },
     {
       property: "og:description",
-      content: data.value.blogDetail?.description,
+      content: data.value.blogDetail?.description || "Blog Description",
     },
     {
       property: "og:image",
-      content: data.value.blogDetail?.thumbnail,
+      content: data.value.blogDetail?.thumbnail || "Blog Thumbnail",
     },
     {
       name: "og:keywords",
-      content: data.value.blogDetail?.meta?.keywords,
+      content:
+        data.value.blogDetail?.meta?.keywords.join(", ") || "Blog Keywords",
     },
   ],
 });
