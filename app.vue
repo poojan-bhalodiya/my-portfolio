@@ -2,9 +2,9 @@
   <div class="bg-secondary-950 text-white">
     <NuxtLoadingIndicator :height="2" :duration="1000" />
     <NuxtLayout>
-      <div class="main-section h-screen overflow-auto">
+      <div class="h-screen overflow-hidden flex flex-col">
         <TopBar />
-        <NuxtPage />
+        <NuxtPage class="overflow-y-auto" />
       </div>
     </NuxtLayout>
   </div>
@@ -12,14 +12,13 @@
 <script setup>
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 onMounted(() => {
   AOS.init();
+  document.body.classList.add("overflow-hidden");
 });
-
 </script>
 <style>
-.page-enter-active, 
+.page-enter-active,
 .page-leave-active {
   transition: all 0.2s;
 }

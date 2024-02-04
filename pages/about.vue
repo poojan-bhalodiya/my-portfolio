@@ -18,16 +18,16 @@
       >
         <!-- Image Here -->
         <div
-          class="w-[350px] h-[450px] border flex items-center justify-center overflow-hidden rounded border-secondary-700"
+          class="w-[350px] h-auto border flex items-center justify-center overflow-hidden rounded-md border-secondary-700"
         >
           <img
-            src="https://source.unsplash.com/random/350x450?man"
+            src="../static/profile-1.jpg"
             alt="No Image Found"
-            class="object-center"
+            class="object-center opacity-50 hover:opacity-90 transition-all duration-700"
           />
         </div>
         <!-- Intro Here -->
-        <div class="md:w-1/2 max-w-md">
+        <div class="md:w-1/2 max-w-md text-center md:text-start">
           <p class="text-orange-400 text-2xl font-semibold">Poojan Bhalodiya</p>
           <p class="font-semibold">Backend Developer</p>
           <p class="mt-5">
@@ -41,7 +41,7 @@
             exploring and mastering the dynamic field of backend technologies.
           </p>
 
-          <div class="mt-5 flex gap-3">
+          <div class="mt-5 flex gap-3 items-center justify-center md:justify-start">
             <button
               @click="$router.push({ path: `/contact` })"
               class="border p-3 border-orange-400 rounded-md hover:ring hover:ring-clay-400 font-semibold"
@@ -60,7 +60,9 @@
       <!-- My Journey -->
       <div class="mt-16 md:mt-20">
         <h2 class="font-semibold text-2xl text-center">My Journey</h2>
-        <div class="flex mt-5 flex-wrap items-center justify-center gap-10">
+        <div
+          class="flex mt-5 flex-wrap items-center justify-center gap-5 md:gap-10"
+        >
           <div v-for="(item, i) in journey" :key="i" class="">
             <div class="flex rounded items-center justify-center gap-2">
               <div
@@ -84,7 +86,7 @@
       <!-- My Intrest -->
       <div class="mt-16 md:mt-20">
         <h2 class="font-semibold text-2xl text-center">My Interests</h2>
-        <div class="flex mt-5 flex-wrap justify-center gap-12">
+        <div class="flex mt-5 flex-wrap justify-center gap-6 md:gap-12">
           <div v-for="(item, i) in intrests" :key="i" class="">
             <div class="flex rounded items-center justify-center gap-2">
               <div

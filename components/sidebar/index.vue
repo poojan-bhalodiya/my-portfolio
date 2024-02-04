@@ -17,8 +17,9 @@
         <!-- Test App -->
         <span
           class="bg-gradient-to-r from-clay-400 to-white bg-clip-text text-transparent"
-          >Poojan Bhalodiya</span
         >
+          Poojan Bhalodiya
+        </span>
       </div>
       <div
         class="items-center h-full flex justify-center flex-col"
