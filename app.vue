@@ -4,7 +4,7 @@
     <NuxtLayout>
       <div class="h-screen overflow-y-auto flex flex-col">
         <TopBar />
-        <NuxtPage />
+        <NuxtPage class="mb-16"/>
       </div>
     </NuxtLayout>
   </div>

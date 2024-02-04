@@ -41,7 +41,9 @@
             exploring and mastering the dynamic field of backend technologies.
           </p>
 
-          <div class="mt-5 flex gap-3 items-center justify-center md:justify-start">
+          <div
+            class="mt-5 flex gap-3 items-center justify-center md:justify-start"
+          >
             <button
               @click="$router.push({ path: `/contact` })"
               class="border p-3 border-orange-400 rounded-md hover:ring hover:ring-clay-400 font-semibold"
