@@ -1,73 +1,68 @@
 <template>
-  <div>
-    <h1>Custom Progress Bar</h1>
-
-    <div class="progress">
-      <div
-        class="progress-done"
-        :style="{ width: progressWidth + '%', opacity: progressOpacity }"
-      >
-        {{ progressWidth }}%
-      </div>
+  <div :class="`progress ${bgColor}`">
+    <div
+      v-if="persent"
+      :id="id"
+      :class="`progress-done bg-gradient-to-l rounded-full ${colorFrom} ${colorTo} ${textColor} w-[${persent}%] text-[10px] opacity-100`"
+    >
+      {{ persent }}%
     </div>
   </div>
 </template>
+<script setup>
+const props = defineProps({
+  persent: {
+    type: Number,
+    default: 75,
+  },
+  colorFrom: {
+    type: String,
+    default: "from-clay-400",
+  },
+  colorTo: {
+    type: String,
+    default: "to-red-400",
+  },
+  textColor: {
+    type: String,
+    default: "text-white",
+  },
+  bgColor: {
+    type: String,
+    default: "bg-white",
+  },
+  id: {
+    type: String,
+    default: "data-120",
+  },
+});
 
-<script>
-export default {
-  data() {
-    return {
-      progressWidth: 0,
-      progressOpacity: 0,
-    };
-  },
-  mounted() {
-    this.progressWidth = parseInt(
-      this.$el.querySelector(".progress-done").getAttribute("data-done")
-    );
-    this.progressOpacity = 1;
-  },
-};
+// On Mounting...
+onMounted(() => {
+  setPersent();
+});
+
+// set Persentage
+function setPersent() {
+  const element = document.getElementById(props.id);
+  element.style.width = `${props.persent}%`;
+}
 </script>
-
-<style>
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f4f4f4;
-  flex-direction: column;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-}
-
+<style scoped>
 .progress {
-  background-color: #d8d8d8;
-  border-radius: 20px;
+  border-radius: 999px;
   position: relative;
-  margin: 15px 0;
-  height: 30px;
-  width: 300px;
+  height: 11px;
+  width: 80%;
 }
 
 .progress-done {
-  background: linear-gradient(to left, #f2709c, #ff9472);
-  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-  border-radius: 20px;
-  color: #fff;
+  width: 0%;
+  border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 0;
-  opacity: 0;
   transition: 1s ease 0.3s;
 }
 </style>

@@ -80,11 +80,11 @@ const sidebarNavigations = [
     label: "About",
     link: "/about",
   },
-  {
-    icon: "ph:bag",
-    label: "Work",
-    link: "/work",
-  },
+  // {
+  //   icon: "ph:bag",
+  //   label: "Work",
+  //   link: "/work",
+  // },
   {
     icon: "material-symbols:folder-outline",
     label: "Projects",
