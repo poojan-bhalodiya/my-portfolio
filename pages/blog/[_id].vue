@@ -1,9 +1,12 @@
 <template>
   <div class="flex items-center justify-center flex-col">
-    <img :src="currentBlogDetail?.banner" />
+    <img :src="data.blogDetail?.banner" />
     <div class="flex items-center justify-center my-10">
-      <article class="prose md:prose-lg w-4/5 article_style_2">
-        <ContentRenderer :value="data">
+      <article
+        class="prose md:prose-lg w-4/5 article_style_2"
+        v-if="data.article"
+      >
+        <ContentRenderer :value="data.article">
           <template #empty>
             <p>No content found.</p>
           </template>
@@ -17,60 +20,64 @@ import blogDetails from "@/data/blogs/detail.js";
 import { ref } from "vue";
 const { path } = useRoute();
 const route = useRoute();
-const currentBlogDetail = ref(null);
+
+// Fetch Details on SSR
+const { data: data } = await useAsyncData("data", async () => {
+  const blogDetail = blogDetails.filter((element) => {
+    return element.slug == route.params._id;
+  });
+
+  let article = await queryContent(path).findOne();
+  return {
+    article: article,
+    blogDetail: blogDetail.length ? blogDetail[0] : null,
+  };
+});
+
+// Set Heads
 useHead({
-  title: currentBlogDetail.value?.title,
+  title: data.value.blogDetail.title,
   meta: [
-    { property: "og:site_name", content: currentBlogDetail.value?.title },
+    { property: "og:site_name", content: data.value.blogDetail?.title },
     {
       name: "description",
-      content: currentBlogDetail.value?.description,
+      content: data.value.blogDetail?.description,
     },
     {
       name: "keywords",
-      content: currentBlogDetail.value?.meta?.keywords,
+      content: data.value.blogDetail?.meta?.keywords,
     },
     {
       property: "image",
-      content: currentBlogDetail.value?.thumbnail,
+      content: data.value.blogDetail?.thumbnail,
     },
     { hid: "og:type", property: "og:type", content: "website" },
     {
       property: "og:url",
-      content: currentBlogDetail.value?.meta?.url,
+      content: data.value.blogDetail?.meta?.url,
     },
     {
       property: "og:title",
-      content: currentBlogDetail.value?.title,
+      content: data.value.blogDetail?.title,
     },
     {
       property: "og:description",
-      content: currentBlogDetail.value?.description,
+      content: data.value.blogDetail?.description,
     },
     {
       property: "og:image",
-      content: currentBlogDetail.value?.thumbnail,
+      content: data.value.blogDetail?.thumbnail,
     },
     {
       name: "og:keywords",
-      content: currentBlogDetail.value?.meta?.keywords,
+      content: data.value.blogDetail?.meta?.keywords,
     },
   ],
 });
 
-const blogDetail = blogDetails.filter((element) => {
-  return element.slug == route.params._id;
-});
-if (blogDetail.length) {
-  currentBlogDetail.value = blogDetail[0];
-} else {
+if (!data.value.blogDetail) {
   console.error("No Blog Details Found at Slug File");
 }
-
-const { data } = await useAsyncData(async () => {
-  let article = queryContent(path).findOne();
-  return await article;
-});
 </script>
 <style lang="scss">
 .article_style_2 {
