@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center justify-center flex-col">
-    <img :src="data.blogDetail?.banner" class="md:min-h-40 object-center" />
+    <img :src="data.projectDetail?.banner" class="md:min-h-40 object-center" />
     <div
       class="flex items-center justify-center py-6 md:py-10 relative flex-col space-y-2"
     >
