@@ -16,9 +16,10 @@ import "aos/dist/aos.css";
 onMounted(() => {
   AOS.init();
 });
+
 </script>
 <style>
-.page-enter-active,
+.page-enter-active, 
 .page-leave-active {
   transition: all 0.2s;
 }

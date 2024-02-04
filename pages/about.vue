@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center justify-center w-full py-8">
-    <div class="container">
+    <div class="container mx-7">
       <!-- Heading -->
       <div class="flex items-center justify-center flex-col">
         <h1 class="text-center text-4xl font-bold">About Me</h1>
@@ -13,19 +13,21 @@
       </div>
 
       <!-- Image & Intro -->
-      <div class="gap-8 mt-14 flex items-center justify-center">
+      <div
+        class="gap-8 mt-14 flex items-center justify-center md:flex-row flex-col"
+      >
         <!-- Image Here -->
         <div
-          class="w-[350px] h-[450px] border flex items-center justify-center overflow-hidden"
+          class="w-[350px] h-[450px] border flex items-center justify-center overflow-hidden rounded border-secondary-700"
         >
           <img
             src="https://source.unsplash.com/random/350x450?man"
             alt="No Image Found"
-            class="object-center"
+            class="object-center "
           />
         </div>
         <!-- Intro Here -->
-        <div class="w-1/2 max-w-md">
+        <div class="md:w-1/2 max-w-md">
           <p class="text-orange-400 text-2xl font-semibold">Poojan Bhalodiya</p>
           <p class="font-semibold">Backend Developer</p>
           <p class="mt-5">

@@ -23,7 +23,7 @@
             <div
               v-for="(item, i) in education"
               :key="i"
-              class="flex gap-4 bg-secondary-900 rounded p-2"
+              class="flex gap-4 bg-secondary-925 rounded p-2"
             >
               <div>
                 <Icon
@@ -208,7 +208,11 @@
               and management of data
             </li>
             <li>
-              Mastering the art of completing tasks under tight deadlines, I excel in swiftly navigating through challenges to deliver exceptional results. My expertise extends to databases, where I harness the potential of structured information for seamless storage, retrieval, and efficient data management.
+              Mastering the art of completing tasks under tight deadlines, I
+              excel in swiftly navigating through challenges to deliver
+              exceptional results. My expertise extends to databases, where I
+              harness the potential of structured information for seamless
+              storage, retrieval, and efficient data management.
             </li>
           </ul>
         </template>
@@ -217,7 +221,7 @@
       <!-- Experience -->
       <ResumeAccordion title="Experience" icon="ph:bag" :is-open="false">
         <template #default>
-          <div class="m-4 bg-secondary-900 rounded-md p-4">
+          <div class="m-4 bg-secondary-925 rounded-md p-4">
             <div class="gap-5 flex">
               <div>
                 <Icon
@@ -251,7 +255,7 @@
                   <p class="font-semibold text-sm md:text-md">
                     <Icon
                       name="mdi:calendar-outline"
-                      class="h-4 w-4 md:h-7 md:w-7 text-clay-300"
+                      class="h-4 w-4 md:h-6 md:w-6 text-clay-300"
                     />
                     20 Months Of Experience
                   </p>
