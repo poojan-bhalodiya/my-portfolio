@@ -22,7 +22,7 @@ useHead({
     {
       property: "image",
       content:
-        "https://res.cloudinary.com/dhntmsget/image/upload/v1706473841/qcfk4ghdrkmwcq94mivz.jpg",
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
     },
     { hid: "og:type", property: "og:type", content: "website" },
     {
@@ -40,7 +40,7 @@ useHead({
     {
       property: "og:image",
       content:
-        "https://res.cloudinary.com/dhntmsget/image/upload/v1706473841/qcfk4ghdrkmwcq94mivz.jpg",
+        "https://res.cloudinary.com/dhntmsget/image/upload/v1707051471/250X250ProfilePic.png",
     },
     {
       name: "og:keywords",
