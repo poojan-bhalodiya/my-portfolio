@@ -2,9 +2,9 @@
   <div class="bg-secondary-950 text-white">
     <NuxtLoadingIndicator :height="2" :duration="1000" />
     <NuxtLayout>
-      <div class="h-screen overflow-hidden flex flex-col">
+      <div class="h-screen overflow-y-auto flex flex-col">
         <TopBar />
-        <NuxtPage class="overflow-y-auto" />
+        <NuxtPage />
       </div>
     </NuxtLayout>
   </div>

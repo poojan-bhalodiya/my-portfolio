@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-primary text-white sidebar w-full md:w-[320px] h-full z-50 animate__animated animate__slideInLeft"
+    class="bg-primary text-white sidebar w-full md:w-[320px] h-full z-50 animate__animated animate__slideInLeft "
     :class="isToggle ? 'absolute md:relative' : 'hidden md:flex '"
   >
     <button
