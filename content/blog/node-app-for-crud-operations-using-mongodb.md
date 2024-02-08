@@ -58,21 +58,9 @@ open terminal and write this command and add dependences.
 `npm I nodemon express mongoose cors dotenv `
 
 3. create `app.js` file add write a basic server code.
-```
-const express = require("express");
-const app = express();
 
-const PORT = 8000;
+![](https://res.cloudinary.com/dhntmsget/image/upload/v1707419479/Blog/SetupYourNodeAppForCRUDOperationsUsingMongoDB/ScreenShort/BasicServer.png)
 
-app.get("/", (req, res) => {
-  res.send("Node Server");
-});
-
-app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}`);
-});
-
-```
 4. Add script in package. Json page.
 
 ![](https://res.cloudinary.com/dhntmsget/image/upload/v1707326059/Blog/SetupYourNodeAppForCRUDOperationsUsingMongoDB/ScreenShort/Script.webp)
@@ -116,73 +104,20 @@ Our MongoDB connection is completed.
 ### now to go to our CRUD operation.
 
 1. Create a `model` folder and create `model.js` file. This file creates our schema. This is our schema code.
-```
-const mongoose = require("mongoose");
 
-const TodoSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-  },
-  completed: {
-    type: Boolean,
-    default: false,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-});
+- I have link the model.js file Plese check and write the code
 
-module.exports = mongoose.model("Todo", TodoSchema);
-```
+[model.js](https://github.com/poojan-bhalodiya/Todo/blob/main/model/todoModel.js)
 
 2. Create a `controller` folder and create `todo-controller.js` file in our controller folder.
 
 To write our first crate Todo operation controller code for this.
-```
-const Todo = require("../model/todoModel");
 
-//create
-const createTodo = (req, res) => {
-  const todo = new Todo({
-    title: req.body.title,
-    description: req.body.description,
-    completed: req.body.completed,
-  });
-
-  todo
-    .save()
-    .then((savedTodo) => {
-      res.json(savedTodo);
-    })
-    .catch((err) => {
-      res.status(400).send(err);
-    });
-};
-
-module.exports = {
-  createTodo,
-};
-```
+[](https://res.cloudinary.com/dhntmsget/image/upload/v1707419038/Blog/SetupYourNodeAppForCRUDOperationsUsingMongoDB/ScreenShort/CreateController.png)
 
 3. Now to create a `routes` folder and create `router.js` file in routes folder. Create a our first route.
 
-```
-const router = require("express").Router();
-const { createTodo } = require("../controllers/todo");
-
- router.get("/", (req, res) => {
-   res.send("Let's build a CRUD API!");
- });
- 
- router.post("/todos", createTodo);
- 
- module.exports = router;
-```
+![](https://res.cloudinary.com/dhntmsget/image/upload/v1707419350/Blog/SetupYourNodeAppForCRUDOperationsUsingMongoDB/ScreenShort/FirstRouter.png)
 
 4. import router file to `app.js` file this is our `app.js` fie updated code.
 
