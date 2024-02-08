@@ -59,12 +59,12 @@
         </div>
       </div>
 
-      <!-- Recent Blogs... -->
+      <!-- Recent Project... -->
       <div class="border-4 border-secondary-925 rounded-md p-5 text-xl">
         <div class="flex items-center justify-between">
           <h2 class="md:text-2xl">Recent Project :</h2>
           <NuxtLink
-            to="blogs"
+            to="/projects"
             class="p-2 border-clay-400 border rounded-md opacity-80 hover:opacity-100"
           >
             Explore Projects
@@ -79,7 +79,7 @@
             :description="blog.description"
             :slug="blog.slug"
             :wdate="blog.date"
-            :is-blog="true"
+            :is-blog="false"
           />
         </div>
       </div>
