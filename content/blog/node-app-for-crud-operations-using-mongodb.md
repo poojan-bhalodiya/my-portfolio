@@ -105,43 +105,7 @@ Open dialog box to click Drivers and copy Add your connection string into your a
 
 This is updated **`app.js`** file code.
 
-```
-const express = require("express");
-const app = express();
-
-const PORT = 8000;
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-const cors = require("cors");
-
-//env file configration
-dotenv.config();
-app.use(cors());
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-app.get("/", (req, res) => {
-  res.send("Node Server");
-});
-
-//check monodb connection
-mongoose
-  .connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}`);
-});
-```
+[app.js](https://github.com/poojan-bhalodiya/Todo/blob/main/index.js)
 
 9. Now to run ```npm run code``` in terminal that show the your connection is complete work. and show the **message connected to MongoDB**.
 
@@ -222,42 +186,7 @@ const { createTodo } = require("../controllers/todo");
 
 4. import router file to `app.js` file this is our `app.js` fie updated code.
 
-```
-const express = require("express");
-const PORT = 8000;
-const app = express();
-const router = require("./routes/router");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-const cors = require("cors");
-
-//env file configration
-dotenv.config();
-app.use(cors());
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-//use router
-app.use(router);
-
-//check monodb connection
-mongoose
-  .connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-app.listen(PORT, async () => {
-  console.log(`server up on port ${PORT}`);
-});
-```
+[App.js](https://github.com/poojan-bhalodiya/Todo/blob/main/index.js)
 
 5. now run the code to write a `npm run dev` in terminal and our server is start.
  to test our routes to use postman.
@@ -275,102 +204,16 @@ app.listen(PORT, async () => {
 - To successfully a first create operation are completed. This similar way to create our other operation I have attached our all-operation code file to check and update your file.
 
  ### Todo-controller.js 
-```
-const Todo = require("../model/todoModel");
 
-//get
-const getTodos = (req, res) => {
-  Todo.find()
-    .then((todos) => {
-      res.json(todos);
-    })
-    .catch((err) => {
-      res.status(500).send(err);
-    });
-};
+I have add my file link to go and check all controller code.
 
-//create
-const createTodo = (req, res) => {
-  const todo = new Todo({
-    title: req.body.title,
-    description: req.body.description,
-    completed: req.body.completed,
-  });
-
-  todo
-    .save()
-    .then((savedTodo) => {
-      res.json(savedTodo);
-    })
-    .catch((err) => {
-      res.status(400).send(err);
-    });
-};
-
-//update Todo
-const updateTodo = (req, res) => {
-  Todo.findOneAndUpdate(
-    { _id: req.params.todoID },
-    {
-      $set: {
-        title: req.body.title,
-        description: req.body.description,
-        completed: req.body.completed,
-      },
-    },
-    { new: true } // This option returns the updated document
-  )
-    .then((updatedTodo) => {
-      res.json(updatedTodo);
-    })
-    .catch((err) => {
-      res.status(500).send(err);
-    });
-};
-
-// Delete TODO
-const deleteTodo = (req, res) => {
-  Todo.findByIdAndDelete(req.params.ID)
-    .then((deletedTodo) => {
-      if (!deletedTodo) {
-        return res.status(404).json({ error: "Todo not found." });
-      }
-
-      res.json({ message: "Todo deleted successfully." });
-    })
-    .catch((err) => {
-      res.status(500).send(err);
-    });
-};
-module.exports = {
-  getTodos,
-  createTodo,
-  updateTodo,
-  deleteTodo,
-};
-```
+[Controller.js](https://github.com/poojan-bhalodiya/Todo/blob/main/controllers/todo.js)
 
 ### router.js
 
-```
-const router = require("express").Router();
-const { getTodos, createTodo, updateTodo, deleteTodo } = require("../controllers/todo");
+I have add my router file to go and check router file code.
 
-router.get("/", (req, res) => {
-  res.send("Let's build a CRUD API!");
-});
-
-//getTodos
-router.get("/todos", getTodos);
-
-router.post("/todos", createTodo);
-
-router.put("/todos/:todoID", updateTodo);
-
-router.delete("/todos/:ID", deleteTodo); 
-
-module.exports = router;
-```
+[Router.js](https://github.com/poojan-bhalodiya/Todo/blob/main/routes/router.js)
 
 - Now to run the code that can be complete and server is running fine to check our API I have attached for one-by-one screen short for your reference.
 
