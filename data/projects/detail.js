@@ -116,6 +116,37 @@ const Projects = [
       ],
     },
   },
+  {
+    banner:
+      "https://res.cloudinary.com/dhntmsget/image/upload/v1707413716/Projects/ecommerceapi/banner/banner.png",
+    thumbnail:
+      "https://res.cloudinary.com/dhntmsget/image/upload/v1707413644/Projects/ecommerceapi/thumbnail/thumbnail.png",
+    title: "Ecommerce API",
+    description:
+      " This is ecommerce api. user can register, login,Update User,Delete user, Get perticular User, Get all User, Add Product, Add Order and check payment method.",
+    date: "2024-02-08T00:00:00.000Z",
+    tags: [
+      "node.js",
+      "mongoose",
+      "express",
+      "nodemon",
+      "stripe",
+      "jsonwebtoken",
+      "crypto-js",
+      "cors",
+    ],
+    slug: "ecommerce-api",
+    meta: {
+      url: "https://poojan-bhalodiya.vercel.app/blog/ecommerce-api",
+      keywords: [
+        "ecommerce api",
+        "ecommerce api using node",
+        "payment method",
+        "ecommerce",
+        "Add Product",
+      ],
+    },
+  },
 ];
 
 export default Projects;

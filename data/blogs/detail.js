@@ -42,6 +42,28 @@ const blogDetail = [
       ],
     },
   },
+  {
+    banner:
+      "https://res.cloudinary.com/dhntmsget/image/upload/v1707414956/Blog/SetupYourNodeAppForCRUDOperationsUsingMongoDB/banner/banner.png",
+    thumbnail:
+      "https://res.cloudinary.com/dhntmsget/image/upload/v1707414873/Blog/SetupYourNodeAppForCRUDOperationsUsingMongoDB/thumbnail/thumbnail.png",
+    title: "Set up your Node application for CRUD operations using MongoDB",
+    description:
+      "In modern web development, building scalable databases is vital. MongoDB, a popular NoSQL option, is favored for its flexibility and scalability. This post will walk you through setting up a MongoDB cluster for a Node.js Express project, covering basic CRUD operations.",
+    date: "8 Feb 2024",
+    tags: ["Node", "Express", "MongoDb", "CRUD", "Todo", "dotenv", "cors"],
+    slug: "node-app-for-crud-operations-using-mongodb",
+    meta: {
+      url: "https://poojan-bhalodiya.vercel.app/blog/node-app-for-crud-operations-using-mongodb",
+      keywords: [
+        "Node.js",
+        "MongoDb",
+        "Mongo Cluster",
+        "CRUD Operation",
+        "Todo List",
+      ],
+    },
+  },
 ];
 
 export default blogDetail;
