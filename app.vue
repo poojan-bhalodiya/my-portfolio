@@ -1,20 +1,48 @@
 <template>
   <div class="bg-secondary-950 text-white">
-    <NuxtLoadingIndicator :height="2" :duration="1000" />
-    <NuxtLayout>
-      <div class="h-screen overflow-y-auto flex flex-col">
-        <TopBar />
-        <NuxtPage class="mb-16"/>
+    <div v-if="isHidePortfolio">
+      <div
+        class="flex-col space-y-4 h-screen flex items-center justify-center text-4xl font-extrabold text-center underline"
+      >
+        <p class="animate-bounce">Currently Site is Down</p>
+        <p class="text-sm">Contact Developer for more info</p>
       </div>
-    </NuxtLayout>
+    </div>
+    <div v-else class="portfolio-app">
+      <NuxtLoadingIndicator :height="2" :duration="1000" />
+      <NuxtLayout>
+        <div class="h-screen overflow-y-auto flex flex-col">
+          <TopBar />
+          <NuxtPage class="mb-16" />
+        </div>
+      </NuxtLayout>
+    </div>
   </div>
 </template>
 <script setup>
+import { ref } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+const isHidePortfolio = ref(false);
+
+const downtime = ref(new Date("2024-03-28T11:55:00"));
+const remainingHours = ref(0);
+
 onMounted(() => {
   AOS.init();
   document.body.classList.add("overflow-hidden");
+
+  const currentTime = new Date();
+  if (currentTime > downtime.value) {
+    isHidePortfolio.value = true;
+  } else {
+    const timeDiff = downtime.value - currentTime;
+    const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
+    remainingHours.value = { hours, minutes };
+  }
+  console.log("Remaining time is : ", remainingHours.value);
 });
 </script>
 <style>
