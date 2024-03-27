@@ -4,5 +4,6 @@
   >
     <p class="animate-bounce">Currently Site is Down</p>
     <p class="text-sm">Contact Developer for more info</p>
+    <p>Version : 0.0.1 - init middleware for gql</p>
   </div>
 </template>
