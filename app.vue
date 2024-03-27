@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-secondary-950 text-white">
+  <div class="bg-secondary-950 text-white" v-if="!isLoading">
     <div v-if="isHidePortfolio">
       <div
         class="flex-col space-y-4 h-screen flex items-center justify-center text-4xl font-extrabold text-center underline"
@@ -25,8 +25,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const isHidePortfolio = ref(false);
-
-const downtime = ref(new Date("2024-03-28T11:55:00"));
+const isLoading = ref(true);
+const downtime = ref(new Date("2024-03-28T11:58:00"));
 const remainingHours = ref(0);
 
 onMounted(() => {
@@ -42,6 +42,7 @@ onMounted(() => {
     const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
     remainingHours.value = { hours, minutes };
   }
+  isLoading.value = false;
   console.log("Remaining time is : ", remainingHours.value);
 });
 </script>
