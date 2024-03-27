@@ -1,12 +1,12 @@
 <template>
   <div class="bg-secondary-950 text-white">
-    <!-- <NuxtLoadingIndicator :height="2" :duration="1000" />
+    <NuxtLoadingIndicator :height="2" :duration="1000" />
     <NuxtLayout>
       <div class="h-screen overflow-y-auto flex flex-col">
         <TopBar />
+        <NuxtPage class="mb-16"/>
       </div>
-    </NuxtLayout> -->
-    <NuxtPage class="mb-16" />
+    </NuxtLayout>
   </div>
 </template>
 <script setup>
