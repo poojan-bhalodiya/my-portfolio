@@ -26,7 +26,7 @@ import "aos/dist/aos.css";
 
 const isHidePortfolio = ref(false);
 const isLoading = ref(true);
-const downtime = ref(new Date("2024-03-28T11:58:00"));
+const downtime = ref(new Date("2025-03-28T11:58:00"));
 const remainingHours = ref(0);
 
 onMounted(() => {
